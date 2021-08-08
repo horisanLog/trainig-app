@@ -30,6 +30,10 @@ value = 10
 let arrayUni: (number | string | boolean)[]
 arrayUni = [0, 1, 2, "hello", true]
 
+// Literal Types
+let company: "facebook" | "Google" | "Amazon"
+company = "Amazon"
+
 export const App:React.FC = () => {
   return (
     <div className="App">
