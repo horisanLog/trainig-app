@@ -43,6 +43,24 @@ msg2 = "hello"
 let animal = {cat: "small cat"}
 let newAnimal: typeof animal = {cat: "big cat"}
 
+// keyof
+type KEYS = {
+  primary: string
+  secondary: string
+}
+
+let key: keyof KEYS
+key = "primary"
+
+// typeof + keyof
+const SPORTS = {
+  soccer: "soccer",
+  baseball: "baseball"
+}
+
+let keySports: keyof typeof SPORTS
+keySports = "soccer"
+
 export const App:React.FC = () => {
   return (
     <div className="App">
