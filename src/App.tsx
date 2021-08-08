@@ -34,6 +34,15 @@ arrayUni = [0, 1, 2, "hello", true]
 let company: "facebook" | "Google" | "Amazon"
 company = "Amazon"
 
+// typeof
+let msg: string = "hi"
+let msg2: typeof msg
+
+msg2 = "hello"
+
+let animal = {cat: "small cat"}
+let newAnimal: typeof animal = {cat: "big cat"}
+
 export const App:React.FC = () => {
   return (
     <div className="App">
