@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css';
 import Data from "./data.json"
+import TestComponent from './testComponent';
 
 type USERS = typeof Data
 
@@ -86,33 +87,22 @@ function funcGEN1<T extends string | null>(props: T) {
 }
 const gen4 = funcGEN1("hello")
 
-interface Props {
-  price: number
-}
-function funcGEN2<T extends Props>(props: T) {
-  return { value: props.price }
-}
-const gen5 = funcGEN2({ price: 111 })
+// interface Props {
+//   price: number
+// }
+// function funcGEN2<T extends Props>(props: T) {
+//   return { value: props.price }
+// }
+// const gen5 = funcGEN2({ price: 111 })
 
-let keySports: keyof typeof SPORTS
-keySports = "soccer"
+// let keySports: keyof typeof SPORTS
+// keySports = "soccer"
 
-export const App:React.FC = () => {
+export const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <TestComponent text="hello"/>
       </header>
     </div>
   );
